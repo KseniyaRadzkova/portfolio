@@ -1,0 +1,30 @@
+@import './../common/styles/sass/variables';
+
+.footerBlock {
+    background-color: $bgColor;
+
+    .footerContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .title {
+            color: $textColor;
+        }
+
+        .linksContainer {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .link {
+                font-size: 25px;
+                width: 60px;
+                height: 60px;
+                color: #009e66;
+            }
+        }
+    }
+}
+
+

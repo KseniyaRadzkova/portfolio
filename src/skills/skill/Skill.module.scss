@@ -1,0 +1,30 @@
+@import '../../common/styles/sass/variables.scss';
+
+.skillWrapper {
+  width: 250px;
+  background-color: $bgColor;
+  display: flex;
+  flex-direction: column;
+  color: $textColor;
+  padding: 45px;
+  margin: 10px;
+
+  .skill {
+    &:hover {
+      transition-delay: .1s;
+      transition: .3s ease;
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .description {
+      color: #9f9f9f;
+    }
+  }
+}

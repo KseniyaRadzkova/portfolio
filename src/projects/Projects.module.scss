@@ -1,0 +1,26 @@
+@import '../common/styles/sass/variables';
+
+.projectsBlock {
+  min-height: 100vh;
+  background-color: $bgColor;
+  padding: 70px 0;
+
+  .projectsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .projects {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1141px) {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,33 @@
+@import '../common/styles/sass/variables';
+.mainBlock {
+  height: 100vh; /*хотелось бы включить навигацию в эти 100vh, есть какой-нибудь более удобный вариант, чем владывать компоненты один в один? */
+  background-color: $bgColor;
+
+  .text {
+    width: 300px;
+    background-color: $bgColor;
+    color: #9f9f9f;
+    @media screen and (max-width: 980px) {
+      text-align: center;
+    }
+
+    .text h1 {
+      color: $textColor;
+    }
+  }
+
+  .photo {
+    width: 400px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    @media screen and (max-width: 500px) {
+      width: 300px;
+      height: 450px;
+    }
+  }
+}
+
+
+
+
