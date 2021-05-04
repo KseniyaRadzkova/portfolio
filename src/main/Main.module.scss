@@ -1,7 +1,17 @@
 @import '../common/styles/sass/variables';
+
 .mainBlock {
   height: 100vh; /*хотелось бы включить навигацию в эти 100vh, есть какой-нибудь более удобный вариант, чем владывать компоненты один в один? */
   background-color: $bgColor;
+
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.15;
+  }
 
   .text {
     width: 300px;
@@ -21,9 +31,24 @@
     height: 600px;
     background-size: cover;
     background-position: center;
+    z-index: 1;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+
     @media screen and (max-width: 500px) {
       width: 300px;
       height: 450px;
+    }
+
+    &:hover {
+      box-shadow: 0 10px 40px rgba(54, 103, 84, .5);
+      transform: scale(0.95);
+      @media screen and (max-width: 500px) {
+        box-shadow: none;
+        transform: scale(1);
+      }
+
+
     }
   }
 }

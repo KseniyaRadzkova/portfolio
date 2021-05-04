@@ -1,0 +1,24 @@
+@import "../../common/styles/sass/variables";
+
+.nav {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  & a {
+    text-decoration: none;
+    color: #9f9f9f;
+    z-index: 2;
+    &:hover {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
+}
+

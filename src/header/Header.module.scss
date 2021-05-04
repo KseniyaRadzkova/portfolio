@@ -7,10 +7,12 @@
   align-items: center;
 
   .header {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    z-index: 1;
   }
 }
 

@@ -15,7 +15,7 @@
 
   .animatedBar {
     background-color: $primaryColor;
-    content: '';
+    overflow: hidden;
     display: block;
     height: 4px;
     left: 0;

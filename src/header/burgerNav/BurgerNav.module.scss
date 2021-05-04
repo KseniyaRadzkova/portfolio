@@ -1,0 +1,56 @@
+@import "../../common/styles/sass/variables";
+
+.burgerNav {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+
+  .burgerNavItems {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -40px;
+    //display: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transform: translate(0, -150px);
+    transition: 0.7s;
+    background-color: $bgSecondColor;
+    height: 0;
+    padding: 20px;
+
+    a {
+      text-decoration: none;
+      color: #9f9f9f;
+      z-index: 2;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  .show {
+    transform: translate(0, 0);
+    height: 150px;
+  }
+
+  .burgerBtn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    font-size: 25px;
+    right: 20px;
+    top: -15px;
+    color: $primaryColor;
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 400px) {
+    display: none;
+  }
+}
+

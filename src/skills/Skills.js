@@ -24,7 +24,7 @@ function Skills() {
     };
 
     return (
-        <div className={style.skillsBlock} style={wall}>
+        <div id="skills" className={style.skillsBlock} style={wall}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title text={"Skills"}/>
                 <div className={style.skills}>
