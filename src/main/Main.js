@@ -119,6 +119,12 @@ function Main() {
                 </div>
                 <div className={style.photo} style={photoImg}></div>
             </div>
+
+            <div className={style.CVWrapper}>
+                <h4 className={style.CVText}>Download CV</h4>
+                <a className={style.CVBtn}
+                   href={"https://drive.google.com/file/d/1HWLAvyeMKuvvWz-KQIYr5tZKKyrjcRVq/view?usp=sharing"}>click</a>
+            </div>
         </div>
     );
 }

@@ -2,13 +2,15 @@
 
 .headerContainer {
   height: 80px;
+  width: 100%;
   background-color: $bgSecondColor;
   display: flex;
+  justify-content: center;
   align-items: center;
-
   .header {
+    max-width: 1500px;
     width: 100%;
-    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: flex-end;
     position: relative;

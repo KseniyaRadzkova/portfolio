@@ -1,20 +1,18 @@
 @import "../../common/styles/sass/variables";
 
 .nav {
-  width: 340px;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  padding-left: 30px;
-  padding-right: 30px;
-
+  padding-right: 50px;
+  padding-left: 50px;
   & a {
     text-decoration: none;
     color: #9f9f9f;
-    z-index: 2;
+    margin-right: 30px;
     &:hover {
       color: $primaryColor;
       cursor: pointer;
+    }
+    &:last-child {
+      margin: 0;
     }
   }
   @media screen and (max-width: 400px) {

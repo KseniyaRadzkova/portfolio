@@ -1,44 +1,21 @@
 import React from 'react';
 import style from './Nav.module.scss';
-import { Link, animateScroll as scroll } from "react-scroll";
+import {Link, animateScroll as scroll} from "react-scroll";
 
-function Nav() {
+const arrTitles = ['home', 'skills', 'projects', 'contacts']
+
+export const Nav = () => {
     return (
         <div className={style.nav}>
-            <Link
+            {arrTitles.map((item, i) => <Link
+                key={i}
                 activeClass={style.active}
-                to="home"
+                to={item}
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration={500}
-            >home</Link>
-            <Link
-                activeClass={style.active}
-                to="skills"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-            >skills</Link>
-            <Link
-                activeClass={style.active}
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-            >projects</Link>
-            <Link
-                activeClass={style.active}
-                to="contacts"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-            >contact</Link>
-        </div>
+            >{item}</Link>)}
+    </div>
     );
 }
-
-export default Nav;

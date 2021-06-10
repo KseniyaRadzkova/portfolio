@@ -9,32 +9,44 @@
 
     .title {
       color: $textColor;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 30px;
+
+      &:last-child {
+        font-weight: 300;
+        font-size: 14px;
+      }
     }
 
     .linksContainer {
-      width: 60%;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+
+      @media screen and (max-width: 450px) {
+        padding: 10px;
+      }
 
 
       .link {
         position: relative;
         font-size: 25px;
-        width: 60px;
-        height: 60px;
         color: #009e66;
         transition: .4s linear;
+        margin-right: 40px;
 
-          &:hover {
-            transform: scale(.9);
-          }
+        &:last-child {
+          margin-right: 0;
+        }
 
-
-
+        &:hover {
+          transform: scale(.9);
+        }
       }
     }
   }
 }
+
 
 

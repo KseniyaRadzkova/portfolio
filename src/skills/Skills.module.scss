@@ -1,7 +1,6 @@
 @import '../common/styles/sass/variables';
 
 .skillsBlock {
-  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 70px 0;
@@ -20,6 +19,8 @@
   }
 
   .skillsContainer {
+    max-width: 1500px;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
 
@@ -29,6 +30,8 @@
       justify-content: space-between;
       flex-wrap: wrap;
       z-index: 3;
+      align-items: center;
+
 
       @media screen and (max-width: 966px) {
         justify-content: center;
