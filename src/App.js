@@ -10,7 +10,7 @@ import Footer from "./footer/Footer";
 function App() {
     return (
         <div className="App">
-            <Header/>
+            {/*<Header/>*/}
             <Main />
             <Skills />
             <Projects />

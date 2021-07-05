@@ -5,11 +5,13 @@
   padding-left: 50px;
   & a {
     text-decoration: none;
-    color: #9f9f9f;
+    color: $textColor;
     margin-right: 30px;
+    transition: .2s linear;
     &:hover {
       color: $primaryColor;
       cursor: pointer;
+      transform: scale(.9);
     }
     &:last-child {
       margin: 0;

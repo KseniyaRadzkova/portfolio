@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './Footer.module.scss';
 import styleContainer from "../common/styles/Container.module.scss";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -15,14 +15,14 @@ function Footer() {
                 <Slide bottom>
                     <div className={style.footerWrapper}>
                         <div className={style.linksContainer}>
-                            <a href={"tel:+375447127095"} className={style.link}><i className="fa fa-phone" aria-hidden="true"></i></a>
+                            <a data-description={"+375447127095"} href={"tel:+375447127095"} className={`${style.link} ${style.description}`}><i className="fa fa-phone" aria-hidden="true"></i></a>
                             <a href={"https://www.linkedin.com/in/radzkova/"} className={style.link}><FontAwesomeIcon
                                 icon={faLinkedin}/></a>
                             <a href={"https://github.com/KseniyaRadzkova"} className={style.link}><FontAwesomeIcon
                                 icon={faGithub}/></a>
                             <a href={"https://t.me/radzkovakseniya"} className={style.link}><FontAwesomeIcon
                                 icon={faTelegram}/></a>
-                            <a href={"mailto:kseniya.goncharuk@mail.ru"} className={style.link}><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
+                            <a data-description={"kseniya.goncharuk@mail.ru"} href={"mailto:kseniya.goncharuk@mail.ru"} className={`${style.link} ${style.description}`}><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </Slide>

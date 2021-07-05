@@ -1,9 +1,10 @@
 @import '../common/styles/sass/variables';
 
 .headerContainer {
+  z-index: 10;
   height: 80px;
   width: 100%;
-  background-color: $bgSecondColor;
+  //background-color: $bgColor;
   display: flex;
   justify-content: center;
   align-items: center;

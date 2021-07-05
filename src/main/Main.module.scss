@@ -1,164 +1,203 @@
 @import '../common/styles/sass/variables';
 
 .mainBlock {
-  padding-top: 180px;
-  padding-bottom: 100px;
-  background-color: $bgColor;
-  @media screen and (max-width: 980px) {
-    padding-top: 50px;
-    padding-bottom: 80px;
-  }
+  position: relative;
+  min-height: 120vh;
 
-  .particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0.15;
-  }
-
-  .text {
-    width: 300px;
-    background-color: $bgColor;
-    color: #9f9f9f;
-    @media screen and (max-width: 980px) {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .text h1 {
-      color: $textColor;
-    }
-  }
-
-  .photo {
-    width: 400px;
-    height: 600px;
+  .backgroundBlock {
+    display: block;
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
     z-index: 1;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    -webkit-animation: grow 25s 2s alternate infinite;
 
-    @media screen and (max-width: 500px) {
-      width: 300px;
-      height: 450px;
+    @keyframes grow {
+      0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      100% {
+        -webkit-transform: scale3d(1.3, 1.3, 1.3);
+        transform: scale3d(1.3, 1.3, 1.3);
+      }
     }
 
-    &:hover {
-      box-shadow: 0 10px 40px rgba(54, 103, 84, .5);
-      transform: scale(0.95);
-      @media screen and (max-width: 500px) {
-        box-shadow: none;
-        transform: scale(1);
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: $bgColor;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.8;
+    }
+
+    @keyframes grow {
+      0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      100% {
+        -webkit-transform: scale3d(1.3, 1.3, 1.3);
+        transform: scale3d(1.3, 1.3, 1.3);
       }
     }
   }
 
-  .CVWrapper {
-    height: 100px;
-    min-width: 40%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-    @media screen and (max-width: 880px) {
-      margin-top: 100px;
-    }
+  .wrapper {
+    padding-top: 60px;
+    padding-bottom: 100px;
 
-    .CVText {
+    .text {
+      width: 300px;
+      z-index: 3;
       color: $textColor;
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-
-    .CVBtn {
-      font-size: 22px;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-weight: 700;
-      color: $textColor;
-      background: $primaryColor;
-      background: linear-gradient(90deg, #171a18, $bgSecondColor);
-      border: none;
-      border-radius: 1000px;
-      box-shadow: 12px 12px 24px rgba(0, 158, 102, 30%);
-      transition: all .3s ease-in-out 0s;
-      cursor: pointer;
-      outline: transparent;
-      position: relative;
-      padding: 10px 60px;
-      line-height: 60px;
-      text-decoration: none;
-      text-align: center;
-
-      &::before {
-        content: "";
-        border-radius: 1000px;
-        padding: 10px 60px;
-        border: 6px solid $primaryColor;
-        box-shadow: 0 0 60px rgba(0, 255, 203, 64%);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: all .3s ease-in-out 0s;
+      @media screen and (max-width: 980px) {
+        text-align: center;
+        margin-bottom: 25px;
       }
 
-      &::after {
-        content: "";
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        border: 4px solid $primaryColor;
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation-name: ring;
-        animation-duration: 1.5s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
+      .text h1 {
+        color: $textColor;
+      }
+    }
+
+    .photo {
+      width: 400px;
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+
+      @media screen and (max-width: 500px) {
+        width: 300px;
+        height: 450px;
       }
 
       &:hover {
-        color: $primaryColor;
-        transform: translateY(-6px);
-        background: #4fd1c5;
-        background: linear-gradient(90deg, #d9e5e1, $textColor);
+        box-shadow: 0 10px 60px rgba(54, 103, 84, .5);
+        transform: scale(0.95);
+        @media screen and (max-width: 500px) {
+          box-shadow: none;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .CVWrapper {
+      height: 100px;
+      min-width: 40%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      @media screen and (max-width: 880px) {
+        margin-top: 100px;
+      }
+
+      .CVText {
+        color: $textColor;
+        font-size: 16px;
+        margin-bottom: 30px;
+        z-index: 3;
+      }
+
+      .CVBtn {
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 700;
+        color: $textColor;
+        background: $primaryColor;
+        background: linear-gradient(90deg, #171a18, $bgSecondColor);
         border: none;
         border-radius: 1000px;
-        box-shadow: 12px 12px 24px rgba(79, 209, 197, 64%);
+        box-shadow: 12px 12px 24px rgba(0, 158, 102, 30%);
         transition: all .3s ease-in-out 0s;
         cursor: pointer;
         outline: transparent;
         position: relative;
         padding: 10px 60px;
         line-height: 60px;
-      }
+        text-decoration: none;
+        text-align: center;
+        z-index: 3;
 
-      @keyframes ring {
-        0% {
+        &::before {
+          content: "";
+          border-radius: 1000px;
+          padding: 10px 60px;
+          border: 6px solid $primaryColor;
+          box-shadow: 0 0 60px rgba(0, 255, 203, 64%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: all .3s ease-in-out 0s;
+        }
+
+        &::after {
+          content: "";
           width: 30px;
           height: 30px;
+          border-radius: 100%;
+          border: 4px solid $primaryColor;
+          position: absolute;
+          z-index: -1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation-name: ring;
+          animation-duration: 1.5s;
+          animation-timing-function: ease;
+          animation-delay: 0s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-fill-mode: none;
+          animation-play-state: running;
         }
-        100% {
-          width: 200px;
-          height: 200px;
+
+        &:hover {
+          color: $primaryColor;
+          transform: translateY(-6px);
+          background: #4fd1c5;
+          background: linear-gradient(90deg, #d9e5e1, $textColor);
+          border: none;
+          border-radius: 1000px;
+          box-shadow: 12px 12px 24px rgba(79, 209, 197, 64%);
+          transition: all .3s ease-in-out 0s;
+          cursor: pointer;
+          outline: transparent;
+          position: relative;
+          padding: 10px 60px;
+          line-height: 60px;
+        }
+
+        @keyframes ring {
+          0% {
+            width: 30px;
+            height: 30px;
+          }
+          100% {
+            width: 200px;
+            height: 200px;
+          }
         }
       }
-
     }
   }
 }
+
 
 
 

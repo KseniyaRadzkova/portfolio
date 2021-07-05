@@ -22,7 +22,6 @@
     max-width: 1500px;
     width: 100%;
     flex-direction: column;
-    justify-content: flex-start;
 
     .skills {
       width: 100%;
@@ -31,7 +30,6 @@
       flex-wrap: wrap;
       z-index: 3;
       align-items: center;
-
 
       @media screen and (max-width: 966px) {
         justify-content: center;
