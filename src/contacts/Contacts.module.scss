@@ -14,6 +14,7 @@
   }
   @media screen and (max-width: 600px) {
     background-position: right 50% bottom 0;
+    height: 85vh;
   }
 
   &::before {
@@ -44,7 +45,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 3fr 1fr;
         position: relative;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 600px) {
           grid-template-columns: 1fr;
           grid-column-gap: 0;
           grid-template-rows: 1fr 1fr 3fr 1fr;
@@ -65,24 +66,72 @@
           background-color: #9f9f9f;
           outline: none;
           border: none;
-          @media screen and (max-width: 500px) {
+          @media screen and (max-width: 600px) {
             grid-area: 3/1/4/2;
           }
         }
 
         .btn {
-          padding: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 10px;
           background-color: #9f9f9f;
           outline: none;
-          border: none;
           grid-area: 3/1/span 1/span 2;
           width: 50%;
           margin: 0 auto;
-          @media screen and (max-width: 500px) {
+
+          font-size: 22px;
+          text-transform: uppercase;
+          letter-spacing: 1.3px;
+          font-weight: 700;
+          color: $textColor;
+          background: $primaryColor;
+          background: linear-gradient(90deg, #171a18, $bgSecondColor);
+          border: none;
+          border-radius: 1000px;
+          box-shadow: 12px 12px 24px rgba(0, 158, 102, 30%);
+          transition: all .3s ease-in-out 0s;
+          cursor: pointer;
+          outline: transparent;
+          position: relative;
+          padding: 10px 60px;
+          line-height: 60px;
+          text-decoration: none;
+          text-align: center;
+          z-index: 3;
+
+          &::before {
+            content: "";
+            border-radius: 1000px;
+            padding: 10px 60px;
+            border: 6px solid $primaryColor;
+            box-shadow: 0 0 60px rgba(0, 255, 203, 64%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s ease-in-out 0s;
+          }
+
+          &:hover {
+            color: $primaryColor;
+            transform: translateY(-6px);
+            background: #4fd1c5;
+            background: linear-gradient(90deg, #d9e5e1, $textColor);
+            border: none;
+            border-radius: 1000px;
+            box-shadow: 12px 12px 24px rgba(79, 209, 197, 64%);
+            transition: all .4s ease-in-out 0s;
+            cursor: pointer;
+            outline: transparent;
+            position: relative;
+            padding: 10px 60px;
+            line-height: 60px;
+          }
+
+          @media screen and (max-width: 600px) {
             grid-area: 4/1/5/2;
             width: 100%;
             background-color: $primaryColor;

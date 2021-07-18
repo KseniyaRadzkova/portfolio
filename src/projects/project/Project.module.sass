@@ -4,6 +4,7 @@
 .wrapper
   padding-top: 60px
   height: 400px
+
   .container
     position: relative
     width: 300px
@@ -14,11 +15,14 @@
     flex-direction: column-reverse
     align-items: center
     padding: 15px
-    &:hover
-      height: 350px
-      transition: all .4s ease-in-out
+    @media screen and (min-width: 415px)
+      &:hover
+        height: 350px
+        transition: all .4s ease-in-out
+
       .link, .description
         opacity: 1
+
     .image
       position: absolute
       width: 260px
@@ -30,7 +34,8 @@
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
       transition: all .5s ease-in-out
       @media screen and (max-width: 415px)
-        top: -100px
+        top: -200px
+
     .link
       @include text(20px, 600, 0.1)
       opacity: 0
@@ -45,6 +50,7 @@
       @media screen and (max-width: 415px)
         opacity: 1
         color: $primaryColor
+
     .description
       @include text(14px, 400, 1.7)
       opacity: 0

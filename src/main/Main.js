@@ -29,9 +29,8 @@ function Main() {
                     <div className={style.photo} style={photoImg}></div>
                 </div>
                 <div className={style.CVWrapper}>
-                    <h4 className={style.CVText}>Download CV</h4>
-                    <a className={style.CVBtn}
-                       href={"https://drive.google.com/file/d/1HWLAvyeMKuvvWz-KQIYr5tZKKyrjcRVq/view?usp=sharing"}>click</a>
+                    <a className={style.CVBtn} target="_blank"
+                       href={"https://drive.google.com/file/d/14Katsj0c_H2r_gLkkSY0I6Q9QaNRqR0m/view?usp=sharing"}>Download CV</a>
                 </div>
             </div>
 
