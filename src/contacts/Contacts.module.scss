@@ -2,7 +2,7 @@
 
 .contactsBlock {
   background-color: $bgColor;
-  height: 80vh;
+  //height: 80vh;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
   }
   @media screen and (max-width: 600px) {
     background-position: right 50% bottom 0;
-    height: 85vh;
+    //height: 85vh;
   }
 
   &::before {
@@ -79,8 +79,8 @@
           outline: none;
           grid-area: 3/1/span 1/span 2;
           width: 50%;
-          margin: 0 auto;
-
+          margin-top: 10px;
+          justify-self: center;
           font-size: 22px;
           text-transform: uppercase;
           letter-spacing: 1.3px;
