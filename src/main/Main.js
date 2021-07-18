@@ -30,7 +30,7 @@ function Main() {
                 </div>
                 <div className={style.CVWrapper}>
                     <a className={style.CVBtn} target="_blank"
-                       href={"https://drive.google.com/file/d/14Katsj0c_H2r_gLkkSY0I6Q9QaNRqR0m/view?usp=sharing"}>Download CV</a>
+                       href={"https://drive.google.com/file/d/1EScCcnta4l7L9Pl2BwSb7jjphOpRCKeQ/view?usp=sharing"}>Download CV</a>
                 </div>
             </div>
 
